@@ -33,7 +33,6 @@
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ plateNo }),
                     }).then((res) => {
-                        console.log(res.status);
                         if (res.status === 200) {
                             document.getElementById('waiting').innerHTML =
                                 'Your permit was created.';
