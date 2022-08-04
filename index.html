@@ -33,12 +33,13 @@
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ plateNo }),
                     }).then((res) => {
-                        if (res) {
+                        console.log(res.status);
+                        if (res.status === 200) {
                             document.getElementById('waiting').innerHTML =
                                 'Your permit was created.';
                         } else {
                             document.getElementById('waiting').innerHTML =
-                                'Your permit was not created. Please ask Adrian or Corey for help it.';
+                                'Your permit was not created. Please ask Adrian or Corey for help with it.';
                         }
                     });
                 }
