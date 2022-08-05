@@ -25,7 +25,7 @@
             document.getElementById('btn-alert').addEventListener('click', function () {
                 const plateNo = document.getElementById('plate').value.trim();
 
-                if (!plateNo) alert('Name Cannot be empty!');
+                if (!plateNo) alert('You must enter a plate!');
                 else {
                     document.getElementById('waiting').innerHTML = 'Please Wait....';
                     fetch('https://permt-backend.herokuapp.com/', {
